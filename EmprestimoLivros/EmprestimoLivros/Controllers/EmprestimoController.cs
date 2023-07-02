@@ -1,6 +1,7 @@
 ﻿using EmprestimoLivros.Data;
 using EmprestimoLivros.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Identity.Client;
 
 namespace EmprestimoLivros.Controllers
 {
@@ -18,7 +19,7 @@ namespace EmprestimoLivros.Controllers
             return View(emprestimos);
         }
 
-
+        [HttpGet]
         public IActionResult Cadastrar()
         {
             return View();
@@ -36,6 +37,67 @@ namespace EmprestimoLivros.Controllers
             }
 
             return View();
+        }
+
+        [HttpGet]
+        public IActionResult Editar(int? id)
+        {
+            if(id == null || id ==0)
+            {
+                return NotFound();
+            }
+
+            EmprestimosModel emprestimo = _db.Emprestimos.FirstOrDefault(x => x.Id == id);
+
+            if(emprestimo == null)
+            {
+                return NotFound();
+            }
+            return View(emprestimo);
+        }
+
+        [HttpPost]
+        public IActionResult Editar(EmprestimosModel emprestimos)
+        {
+            if (ModelState.IsValid)
+            {
+                _db.Emprestimos.Update(emprestimos);
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            return View(emprestimos);
+        }
+
+        [HttpGet]
+        public IActionResult Excluir(int? id)
+        {
+            if(id == null || id == 0)
+            {
+                return NotFound();
+            }
+
+            EmprestimosModel emprestimo = _db.Emprestimos.FirstOrDefault(x => x.Id == id);
+
+            if (emprestimo == null)
+            {
+                return NotFound();
+            }
+
+            return View(emprestimo);
+        }
+
+        [HttpPost]
+        public IActionResult Excluir(EmprestimosModel emprestimos)
+        {
+            if (ModelState.IsValid)
+            {
+                _db.Emprestimos.Remove(emprestimos);
+                _db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            return View(emprestimos);
         }
     }
 }
