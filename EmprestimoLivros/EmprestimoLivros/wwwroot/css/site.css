@@ -19,5 +19,13 @@ body {
 
 img {
     width: 400px
-    
+}
+
+.alert {
+    display: flex;
+    padding: 8px;
+    margin: 8px;
+    border-radius: 5px;
+    background-color: forestgreen;
+    font-family: 'Shanty House', sans-serif;
 }

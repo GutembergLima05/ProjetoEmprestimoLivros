@@ -6,8 +6,14 @@
         <a class="btn btn-success mx-2" asp-controller="Emprestimo" asp-action="Cadastrar"><i class="bi bi-file-earmark-plus mx-2"></i>Cadastrar novo empréstimo</a>
     </div>
 
+    @if(TempData["MensagemSucesso"] != null)
+    {
+        <div class="alert alert-success text-light" role="alert">
+            @TempData["MensagemSucesso"]
+            </div>
+    }
 
-<table class="table table-striped table-hover">
+<table id="Emprestimos" class="table table-striped table-hover">
     <thead>
         <tr>
             <th scope="col">Recebedor</th>
