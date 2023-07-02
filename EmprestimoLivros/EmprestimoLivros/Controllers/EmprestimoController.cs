@@ -90,14 +90,14 @@ namespace EmprestimoLivros.Controllers
         [HttpPost]
         public IActionResult Excluir(EmprestimosModel emprestimos)
         {
-            if (ModelState.IsValid)
+            if (emprestimos == null)
             {
-                _db.Emprestimos.Remove(emprestimos);
-                _db.SaveChanges();
-                return RedirectToAction("Index");
+                return NotFound();
             }
+            _db.Emprestimos.Remove(emprestimos);
+            _db.SaveChanges();
 
-            return View(emprestimos);
+            return RedirectToAction("Index");
         }
     }
 }
