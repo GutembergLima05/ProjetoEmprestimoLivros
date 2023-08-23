@@ -1,26 +1,33 @@
-## Emprestimo de Livros
+## 💡 Ideia do Projeto - Emprestimos Livros :
+Este projeto foi dedicado para ajudar a organização de uma biblioteca fictícia, com o intuito de facilitar a admnistração do local e facilitar a coleta e distribuição dos livros.
 
-Este projeto foi dedicado para ajudar a organização de uma biblioteca ficticia, com o intuito de facilitar a admnistração do local e facilitar a coleta e distribuição dos livros.
--
-
-🌌 *Ferramentas e Tecnologias*
--
+ ### 💻 Resultado:
 
 
- ![.Net](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white)
- 
-  *(Foi utilizado para toda a criação do projeto, utilizando o modelo MVC para facilitar a implementação)*
+https://github.com/GutembergLima05/ProjetoEmprestimoLivros/assets/125606031/f0fb1481-8a73-42a6-b806-81f7c78b67bd
+
+
+
+
+
+
+### 🌌 *Ferramentas e Tecnologias utilizadas*
+
+- Asp .NET CORE
+- jQuery
+- SqlServer
+- Bootstrap
+- EntityFramework
+- Code-First
+- MVC
+- Git
   
- ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 
-*(Com intuito de produzir o front-end com mais facilidade)*
 
-![MicrosoftSQLServer](https://img.shields.io/badge/Microsoft%20SQL%20Server-CC2927?style=for-the-badge&logo=microsoft%20sql%20server&logoColor=white)
+<hr>
 
-*(Banco de dados inicial para a demanda da loja ficticia)*
+### 💬 Sugestões:
 
-![Visual Studio](https://img.shields.io/badge/Visual%20Studio-5C2D91.svg?style=for-the-badge&logo=visual-studio&logoColor=white)
-
-*(IDE utilizada para produzir todo o projeto)*
+Fico aberto a sugestões de melhoria e ideias, caso você tenha alguma basta me enviar uma mensagem no <a href="https://www.linkedin.com/in/gutemberglima/">Linkedin</a>
 
 
