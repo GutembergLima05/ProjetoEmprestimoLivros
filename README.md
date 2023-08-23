@@ -1,14 +1,15 @@
 ## Emprestimo de Livros
 
-Este projeto foi dedicado para ajudar a organização de uma biblioteca ficticia, com o intuito de facilitar a admnistração do local e facilitar a coleta dos livros
+Este projeto foi dedicado para ajudar a organização de uma biblioteca ficticia, com o intuito de facilitar a admnistração do local e facilitar a coleta e distribuição dos livros.
+-
 
-🌌 *Ferramentas Utilizadas*
+🌌 *Ferramentas e Tecnologias*
 -
 
 
  ![.Net](https://img.shields.io/badge/.NET-5C2D91?style=for-the-badge&logo=.net&logoColor=white)
  
-  *(Foi utilizado para toda a criação do projeto, utilizando o modelo MVC para facilitar a entrega)*
+  *(Foi utilizado para toda a criação do projeto, utilizando o modelo MVC para facilitar a implementação)*
   
  ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 
@@ -22,6 +23,4 @@ Este projeto foi dedicado para ajudar a organização de uma biblioteca ficticia
 
 *(IDE utilizada para produzir todo o projeto)*
 
-**EntityFramework**
 
-*()*
