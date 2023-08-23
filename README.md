@@ -30,4 +30,6 @@ https://github.com/GutembergLima05/ProjetoEmprestimoLivros/assets/125606031/f0fb
 
 Fico aberto a sugestões de melhoria e ideias, caso você tenha alguma basta me enviar uma mensagem no <a href="https://www.linkedin.com/in/gutemberglima/">Linkedin</a>
 
+Video explicativo do projeto COMPLETO no <a href="https://youtu.be/et-qVBSLtrk?si=RmB31bGol6ZFpr1C">Youtube</a>
+
 
