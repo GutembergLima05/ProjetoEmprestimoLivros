@@ -29,3 +29,10 @@ img {
     background-color: forestgreen;
     font-family: 'Shanty House', sans-serif;
 }
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
