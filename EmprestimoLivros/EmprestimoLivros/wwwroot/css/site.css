@@ -1,0 +1,38 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+img {
+    width: 400px
+}
+
+.alert {
+    display: flex;
+    padding: 8px;
+    margin: 8px;
+    border-radius: 5px;
+    background-color: forestgreen;
+    font-family: 'Shanty House', sans-serif;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}

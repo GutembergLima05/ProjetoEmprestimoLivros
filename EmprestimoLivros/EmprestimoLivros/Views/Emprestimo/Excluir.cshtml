@@ -1,0 +1,42 @@
+﻿@model EmprestimosModel
+@{
+    ViewData["title"] = "Excluir Empréstimo";
+}
+
+
+<div class="container bg-dark p-5 rounded-5">
+    <div class="mb-5 text-center">
+        <h1 class="text-light">Excluir Empréstimos</h1>
+    </div>
+
+    <form method="post" asp-controller="Emprestimo" asp-action="Excluir">
+        <input type="hidden" asp-for="Id" />
+
+        <h2 class="text-light">Tem certeza que deseja exlucir o registro?</h2>
+
+        <div class="mb-2">
+            <label for="Recebedor" class="form-label text-light">Recebedor:</label>
+            <input type="text" class="form-control" asp-for="Recebedor" id="Recebedor" placeholder="Quem está recebendo o livro?" disabled>
+            <span class="text-danger" asp-validation-for="Recebedor"></span>
+        </div>
+
+        <div class="mb-2">
+            <label for="Fornecedor" class="form-label text-light">Fornecedor:</label>
+            <input type="text" class="form-control" asp-for="Fornecedor" id="Fornecedor" placeholder="Quem está emprestando o livro?" disabled>
+            <span class="text-danger" asp-validation-for="Fornecedor"></span>
+        </div>
+
+        <div class="mb-2">
+            <label for="Livro" class="form-label text-light">Livro:</label>
+            <input type="text" class="form-control" asp-for="LivroEmprestado" id="Livro" placeholder="Qual é o livro que está sendo emprestado?" disabled>
+            <span class="text-danger" asp-validation-for="LivroEmprestado"></span>
+        </div>
+
+        <div class="d-flex gap-5 mt-5">
+            <button type="submit" class="btn btn-danger w-50">Excluir</button>
+            <a class="btn btn-primary w-50" asp-controller="Emprestimo" asp-action="Index">Voltar</a>
+        </div>
+
+    </form>
+</div>
+
