@@ -1,4 +1,6 @@
 using EmprestimosBase.Data;
+using EmprestimosBase.Services.LoginService;
+using EmprestimosBase.Services.SenhaService;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -7,9 +9,14 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews().AddRazorRuntimeCompilation();
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
     {
-        options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
+        options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection"));
+        AppContext.SetSwitch("Npgsql.EnableLegacyTimestampBehavior", true);
     }
 );
+
+builder.Services.AddScoped<ILoginInterface, LoginService>();
+builder.Services.AddScoped<ISenhaInterface, SenhaService>();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

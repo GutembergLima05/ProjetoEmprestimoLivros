@@ -13,12 +13,13 @@ namespace EmprestimosBase.Migrations
                 name: "Emprestimos",
                 columns: table => new
                 {
-                    Id = table.Column<int>(type: "int", nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    Recebedor = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    Fornecedor = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    LivroEmprestado = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    DataEmprestimo = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:Identity", "1, 1"),
+
+                    Recebedor = table.Column<string>(type: "varchar", nullable: false),
+                    Fornecedor = table.Column<string>(type: "varchar", nullable: false),
+                    LivroEmprestado = table.Column<string>(type: "varchar", nullable: false),
+                    DataEmprestimo = table.Column<DateTime>(type: "timestamp without time zone", nullable: false)
                 },
                 constraints: table =>
                 {

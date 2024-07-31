@@ -12,5 +12,24 @@ namespace EmprestimosBase.Data
 
         public DbSet<EmprestimosModel> Emprestimos { get; set; }
 
+        public DbSet<UsuarioModel> Usuarios { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<EmprestimosModel>(entity =>
+            {
+                entity.HasKey(e => e.Id);
+                entity.Property(e => e.Id).ValueGeneratedOnAdd();
+            });
+
+            modelBuilder.Entity<UsuarioModel>(entity =>
+            {
+                entity.HasKey(e => e.Id);
+                entity.Property(e => e.Id).ValueGeneratedOnAdd();
+            });
+        }
+
     }
 }
